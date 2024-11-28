@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Meme Buttons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fffdfd;
+      margin: 0;
+    }
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+    .meme-button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      position: relative;
+    }
+    .meme-button img {
+      width: 130px;
+      height: auto;
+      border-radius: 50%;
+      transition: transform 0.2s ease;
+    }
+    .meme-button img:hover {
+      transform: scale(1.1);
+    }
+    .title {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Meme Buttons</title>
+  <link rel="stylesheet" href="style.css"> <!-- Linking CSS -->
+</head>
+<body>
+
+  
+    <!-- Audio Element -->
+    <audio id="demo-audio" src="your-audio-file.mp3"></audio>
+  
+    <script>
+      function adjustVolume() {
+        const slider = document.getElementById('volume-slider');
+        const audio = document.getElementById('demo-audio');
+  
+        // Set audio volume based on slider value
+        audio.volume = slider.value;
+  
+        // Play a short sound snippet to demonstrate volume
+        audio.currentTime = 0; // Reset to start
+        audio.play().catch((error) => {
+          console.error('Audio playback failed:', error);
+        });
+      }
+    </script>
+  </body>
+
+  <div class="volume-container">
+    <label for="volume-slider">Volume</label>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" onchange="adjustVolume()">
+  </div>
+
+  <div class="video-container">
+    <video id="my-video" width="100%" height="auto" controls>
+      <source src="BrainrotGP.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="title"> من فضلك دعني أفوز، أعطني شيئًا لأضعه في سيرتي الذاتية</div>
+  
+  <div class="button-container">
+    <!-- Ninja Button -->
+    <button class="meme-button" onclick="playAudio('ninjaAudio')">
+      <img src="https://img.redbull.com/images/c_crop,x_217,y_0,h_2133,w_1707/c_fill,w_450,h_600/q_auto:low,f_auto/redbullcom/2018/06/18/cae41691-8bcb-4d6d-8c0e-43310f90dba9/fortnite-battle-royale-ninja-blevins%22%20alt=%22Ninja" alt="Ninja">
+    </button>
+
+    <!-- Skibidi Button -->
+    <button class="meme-button" onclick="playAudio('skibidiAudio')">
+      <img src="https://i.ytimg.com/vi/PEDV27g-69s/maxresdefault.jpg" alt="Skibidi Toilet">
+    </button>
+    <!-- Hawk Tuah -->
+    <button class="meme-button" onclick="playAudio('HawkAudio')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYu7HejV-EECoX3aPTrV8X4xLa7dE0GIVnHg&s" alt="Hawk Tuah">
+    </button>
+
+    <!-- Big Tongue Man-->
+    <button class="meme-button" onclick="playAudio('SecretAudio')">
+      <img src="https://i.pinimg.com/736x/0c/ab/e8/0cabe8036fe675e5bbfe1145c8f51e65.jpg" alt="Big Tongue">
+    </button>
+
+    <!-- Sonic Feet-->
+    <button class="meme-button" onclick="playAudio('SonicFeet')">
+      <img src="https://pbs.twimg.com/media/GF1dfbwXcAAGwGK.jpg:large" alt="Error">
+    </button>
+
+    <!-- Coolguy-->
+      <button class="meme-button" onclick="playAudio('CoolGuy')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8jeojIvNc5QV2plqtwYztfJbpAA68vy9jGA&s" alt="CoolguyP">
+      </button>
+    
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNbARnF5mcy9S8SqW83IVfAOcTWyJOdMT6gQ&s" alt="Image" class="top-right-image">
+
+  </div>
+  <button class="stop-button" onclick="stopAllAudio()">STAWPPPPP</button>
+  <!-- Audio Elements -->
+  <audio id="ninjaAudio" src="low-taper-fade.mp3"></audio>
+  <audio id="skibidiAudio" src="skibidi-dop.mp3"></audio>
+  <audio id="HawkAudio" src="HawkAudio.mp3"></audio>
+  <audio id="SecretAudio" src="SecretAudio.mp3"></audio>
+  <audio id="SonicFeet" src="SonicFeet.mp3"></audio>
+  <audio id="CoolGuy" src="CoolGuy.mp3"></audio>
+  <script>
+    function playAudio(audioId) {
+      const audio = document.getElementById(audioId);
+      if (audio) {
+        audio.currentTime = 0; // Reset to the start
+        audio.play().catch((error) => {
+          console.error('Audio playback failed:', error);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
